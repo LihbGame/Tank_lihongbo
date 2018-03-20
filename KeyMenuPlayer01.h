@@ -1,5 +1,5 @@
 #pragma once
-#include "GameEntry.h"
+#include "CGameEntry.h"
 #include "GameTimer.h"
 
 class CGame;

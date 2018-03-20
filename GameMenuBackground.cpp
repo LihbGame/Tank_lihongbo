@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "GameMenuBackground.h"
-#include "Game.h"
+#include "CGame.h"
 
 
 CGameMenuBackground::CGameMenuBackground()
