@@ -1,6 +1,6 @@
 #pragma once
 
-#include "CGameEntry.h"
+#include "GameEntry.h"
 
 class CGame;
 

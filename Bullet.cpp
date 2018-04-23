@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "CGameEntry.h"
+#include "GameEntry.h"
 #include "Bullet.h"
 
 

@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "KeyMenuPlayer02.h"
-#include "CGame.h"
+#include "Game.h"
 
 CKeyMenuPlayer02::CKeyMenuPlayer02()
 {

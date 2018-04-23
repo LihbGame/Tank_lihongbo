@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "GameMenuPanel.h"
-#include "CGame.h"
+#include "Game.h"
 
 
 
@@ -15,7 +15,7 @@ CGameMenuPanel::CGameMenuPanel()
         TCHAR path[MAX_PATH];
         _stprintf_s(path, _T("menu_1player_%d.png"), i);
         auto imgPtr = Image::FromFile(path);
-        RectF rc(250, 100, static_cast<float>(imgPtr->GetWidth()),
+        RectF rc(0, 300, static_cast<float>(imgPtr->GetWidth()),
                  static_cast<float>(imgPtr->GetHeight()));
         m_menuItems[0].vImgInfoPtr.push_back(make_tuple(imgPtr, rc));
         //static_cast<float>(img->GetWidth();
@@ -27,7 +27,7 @@ CGameMenuPanel::CGameMenuPanel()
         TCHAR path[MAX_PATH];
         _stprintf_s(path, _T("menu_2plyaer_%d.png"), i);
         auto imgPtr = Image::FromFile(path);
-        RectF rc(250, 400, static_cast<float>(imgPtr->GetWidth())
+        RectF rc(400, 300, static_cast<float>(imgPtr->GetWidth())
                  , static_cast<float>(imgPtr->GetHeight()));
         m_menuItems[1].vImgInfoPtr.push_back(make_tuple(imgPtr, rc));
     }
@@ -77,7 +77,7 @@ void CGameMenuPanel::OnLButtonUp(UINT nFlags, CPoint point)
         auto rect = get<1>(menuItem.vImgInfoPtr[menuItem.index]);
         if(rect.Contains(pt)) {
             // 单人对战
-             m_pParent->SetStep(CGame::EGameTypeOne2BotMenu);
+            // m_pParent->SetStep(CGame::EGameTypeOne2BotMenu);
             return;
         }
     }
@@ -87,7 +87,7 @@ void CGameMenuPanel::OnLButtonUp(UINT nFlags, CPoint point)
         auto rect = get<1>(menuItem.vImgInfoPtr[menuItem.index]);
         if(rect.Contains(pt)) {
             // 双人对战
-            m_pParent->SetStep(CGame::EGameTypeOne2OneMenu);
+            //m_pParent->SetStep(CGame::EGameTypeOne2OneMenu);
             return;
         }
     }

@@ -99,7 +99,7 @@ private:
 	void GameRunLogicOnOne2OneEnd();         //游戏逻辑处理：双人大战结束
 	//把上述方法放入数组，方便调用
 	void (CGame::*m_logicFunc[EGameTypeCount])() = {
-    	&CGame::GameRunLogicMenu,            //选择阶段
+		&CGame::GameRunLogicMenu,            //选择阶段
 		&CGame::GameRunLogicOnOne2BotMenu,   //人机大战按钮提示
 		&CGame::GameRunLogicOnOne2Bot,       //人机大战
 		&CGame::GameRunLogicOnOne2BotEnd,    //人机大战结束
@@ -131,7 +131,7 @@ private:
 	void GameRunDrawOnOne2OneEnd(Graphics &gh);        //游戏绘图处理：双人大战结束
 
 	//把上述方式放入数组，方便调用
-	void (CGame::*m_drawFunc[EGameTypeCount])(Graphics &gh) = {
+	void (CGame::*m_drawFunc[EGameTypeCount])() = {
 		&CGame::GameRunDrawOnMenu,            //选择阶段
 		&CGame::GameRunDrawOnOne2BotMenu,   //人机大战按钮提示
 		&CGame::GameRunDrawOnOne2Bot,       //人机大战

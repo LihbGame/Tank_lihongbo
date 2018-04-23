@@ -2,7 +2,7 @@
 
 #include <tuple>
 #include <vector>
-#include "CGameEntry.h"
+#include "GameEntry.h"
 
 using namespace std;
 
